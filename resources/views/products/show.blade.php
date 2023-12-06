@@ -13,6 +13,11 @@
     <p>{{$product->description}}
     </p>
     <p>{{$product->price}} EUR</p>
+    <form method="POST" action="/products/{{$product->id}}">
+    @csrf
+    @method("DELETE")
+    <button>DELETE!?</button>
+    </form>
   </main>
 </body>
 </html>
